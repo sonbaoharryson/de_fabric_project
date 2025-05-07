@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.62\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "788c491e5b1030830600",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2da2455d6a389527db82\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.082251082251082,\"y\":371.2554112554112,\"z\":2,\"width\":1268.917748917749,\"height\":349.09090909090907,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Series\":[{\"queryRef\":\"security_record_count.security_type_desc\"}],\"Category\":[{\"queryRef\":\"security_record_count.security_desc\"}],\"Y\":[{\"queryRef\":\"Sum(security_record_count.record_count)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"security_record_count\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"security_type_desc\"},\"Name\":\"security_record_count.security_type_desc\",\"NativeReferenceName\":\"security_type_desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"security_desc\"},\"Name\":\"security_record_count.security_desc\",\"NativeReferenceName\":\"security_desc\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"record_count\"}},\"Function\":0},\"Name\":\"Sum(security_record_count.record_count)\",\"NativeReferenceName\":\"record_count\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"record_count\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(security_record_count.record_count)\":{\"displayName\":\"record_count\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 349.09,
+          "width": 1268.92,
+          "x": 11.08,
+          "y": 371.26,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"ac70a101ec0c36a3b9ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.082251082251082,\"y\":0,\"z\":0,\"width\":676.0173160173159,\"height\":360.17316017316017,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Series\":[{\"queryRef\":\"avg_interest_rate_security_and_type_desc.security_type_desc\"}],\"Category\":[{\"queryRef\":\"avg_interest_rate_security_and_type_desc.security_desc\"}],\"Y\":[{\"queryRef\":\"Sum(avg_interest_rate_security_and_type_desc.avg_interest_rate_per_cat)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"avg_interest_rate_security_and_type_desc\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"security_type_desc\"},\"Name\":\"avg_interest_rate_security_and_type_desc.security_type_desc\",\"NativeReferenceName\":\"security_type_desc\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"security_desc\"},\"Name\":\"avg_interest_rate_security_and_type_desc.security_desc\",\"NativeReferenceName\":\"security_desc\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"avg_interest_rate_per_cat\"}},\"Function\":0},\"Name\":\"Sum(avg_interest_rate_security_and_type_desc.avg_interest_rate_per_cat)\",\"NativeReferenceName\":\"avg_interest_rate_per_cat\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"avg_interest_rate_per_cat\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(avg_interest_rate_security_and_type_desc.avg_interest_rate_per_cat)\":{\"displayName\":\"avg_interest_rate_per_cat\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.17,
+          "width": 676.02,
+          "x": 11.08,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"e052672051a034c609ab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":687.099567099567,\"y\":0,\"z\":1,\"width\":592.9004329004329,\"height\":349.09090909090907,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"avg_interest_rate_security_desc.security_desc\"}],\"Y\":[{\"queryRef\":\"Sum(avg_interest_rate_security_desc.avg_interest_rate_per_cat)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"avg_interest_rate_security_desc\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"security_desc\"},\"Name\":\"avg_interest_rate_security_desc.security_desc\",\"NativeReferenceName\":\"security_desc\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"avg_interest_rate_per_cat\"}},\"Function\":0},\"Name\":\"Sum(avg_interest_rate_security_desc.avg_interest_rate_per_cat)\",\"NativeReferenceName\":\"avg_interest_rate_per_cat\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"avg_interest_rate_per_cat\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(avg_interest_rate_security_desc.avg_interest_rate_per_cat)\":{\"displayName\":\"avg_interest_rate_per_cat\"}},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 349.09,
+          "width": 592.90,
+          "x": 687.10,
+          "y": 0.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
