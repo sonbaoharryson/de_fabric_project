@@ -13,7 +13,7 @@
     "tabs": [
       {
         "id": "770bc6eb-3429-481c-921a-738e91d4ec66",
-        "content": "weather_streaming\n| take 10\n\nweather_streaming\n| project Type = location[\"name\"], Country = location[\"country\"]\n",
+        "content": "weather_table\n| take 10\n\nweather_table\n| project Type = location[\"name\"], Country = location[\"country\"]\n",
         "title": "Tab",
         "dataSourceId": "e26628fd-38a9-43e8-a3b7-b60d290661fc"
       }
