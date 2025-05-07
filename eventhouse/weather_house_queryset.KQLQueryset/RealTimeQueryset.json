@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "e26628fd-38a9-43e8-a3b7-b60d290661fc",
+        "clusterUri": "",
+        "type": "Fabric",
+        "databaseItemId": "d9899834-edc7-ba56-40c0-c412d33adffa",
+        "databaseItemName": "weather_house"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "770bc6eb-3429-481c-921a-738e91d4ec66",
+        "content": "weather_streaming\n| take 10\n\nweather_streaming\n| project Type = location[\"name\"], Country = location[\"country\"]\n",
+        "title": "Tab",
+        "dataSourceId": "e26628fd-38a9-43e8-a3b7-b60d290661fc"
+      }
+    ]
+  }
+}
