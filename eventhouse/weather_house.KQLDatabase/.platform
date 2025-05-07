@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "weather_house",
+    "description": "weather_house"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d9899834-edc7-ba56-40c0-c412d33adffa"
+  }
+}
