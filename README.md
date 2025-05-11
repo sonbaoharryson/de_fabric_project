@@ -57,26 +57,22 @@ This repository contains a data engineering project implemented on Microsoft Fab
 ## Architecture
 
 The project follows a modern data architecture pattern:
-- Data ingestion through Event Stream
-- Processing and transformation using Notebooks
-- Storage in Lakehouse
-- Real-time analytics in Event House
-- Visualization through Power BI Dashboards
+- Data ingestion through Event Stream for weather data from Weather Stack API. (for streaming data).
+- Using COPY activity in Pipeline to pull data from treasury API. (for batch data).
+- Processing and transformation using Notebooks.
+- Storage treasury data in Lakehouse.
+- Storage weather data in KQL Database.
+- Visualization through Power BI Dashboards.
 
-## Best Practices
+***Notes: I will provide HLD Diagram later.***
 
-- Follow data quality standards
-- Implement proper error handling
-- Use version control for all components
-- Document all data transformations
-- Monitor pipeline performance
+## Linage View for Data Flow
 
-## Contributing
+### Treasury Data
+![Treasury Data Lineage View](images/Linage%20View%20Treasury%20Data.png)
 
-1. Create a new branch for your changes
-2. Follow the existing code structure
-3. Update documentation as needed
-4. Submit a pull request
+### Weather Data
+![Weather Data Lineage View](images/Linage%20View%20Weather%20Data.png)
 
 ## License
 
