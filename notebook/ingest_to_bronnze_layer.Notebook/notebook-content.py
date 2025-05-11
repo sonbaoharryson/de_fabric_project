@@ -34,7 +34,7 @@ df = spark.read.option("multiline", "true").json("Files/treasure_api_data.json")
 
 # CELL ********************
 
-from pyspark.sql.functions import explode, col, concat, lit
+from pyspark.sql.functions import explode, col, concat, lit, current_timestamp
 from pyspark.sql.types import StructField, StructType, StringType
 # split data into rows
 df_exploded = df\
@@ -58,7 +58,9 @@ schema = StructType() \
 
 # parse data from json to table
 df_parsed = df_exploded.select("json_object.*")
-df_parsed = df_parsed.withColumn('key', concat(col("security_desc"), lit(" "),col("src_line_nbr"), lit(" "), col("record_date")))
+df_parsed = df_parsed\
+                .withColumn('key', concat(col("security_desc"), lit(" "),col("src_line_nbr"), lit(" "), col("record_date")))\
+                .withColumn('lk_load_datetime', current_timestamp())
 
 # METADATA ********************
 

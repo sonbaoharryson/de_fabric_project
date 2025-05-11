@@ -22,7 +22,7 @@
 
 # CELL ********************
 
-from pyspark.sql.functions import col, cast, round, trim
+from pyspark.sql.functions import col, cast, round, trim, current_timestamp
 from pyspark.sql.utils import AnalysisException
 df = spark.sql("SELECT * FROM treasury_lakehouse.bronze.treasure_data")
 df_casted = df.select(
@@ -36,7 +36,8 @@ df_casted = df.select(
             col("src_line_nbr").cast('int').alias("src_line_nbr"),
             trim(col("security_desc")).alias("security_desc"),
             trim(col("security_type_desc")).alias("security_type_desc"),
-            trim(col("key")).alias("key")
+            trim(col("key")).alias("key"),
+            col("lk_load_datetime")
 )
 try:
     df_casted\
